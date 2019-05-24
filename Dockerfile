@@ -14,13 +14,15 @@ RUN mkdir -p /prometheus && \
     chown -R nobody:nogroup etc/prometheus /prometheus
 COPY prometheus_reload_check.sh             /prometheus
 COPY prometheus_start.sh                    /prometheus
+RUN chmod +x /prometheus/prometheus_reload_check.sh
+RUN chmod +x /prometheus/prometheus_start.sh
 
 USER       nobody
 EXPOSE     9090
 VOLUME     [ "/prometheus" ]
 WORKDIR    /prometheus
 
-ENTRYPOINT /bin/bash prometheus_start.sh
+ENTRYPOINT ./prometheus_start.sh
 
 
 # ENTRYPOINT [ "/bin/prometheus" ]
