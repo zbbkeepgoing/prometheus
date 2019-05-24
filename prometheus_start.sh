@@ -1,6 +1,6 @@
 # prometheus reload check 
 # if /etc/prometheus/prometheus.yaml modify, this sh will curl the reload request of prometheus.
-nohup /bin/bash prometheus_reload_check.sh	> reload_check.log 2>&1
+nohup ./prometheus_reload_check.sh	> reload_check.log 2>&1
 
 # --web.enable-lifecycle
 # enable reload prometheus.yaml of prometheus 
