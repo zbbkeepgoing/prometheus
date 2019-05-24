@@ -10,7 +10,7 @@ while [[ true ]]; do
      else
         echo "${now} : file change"
         echo "${now} : new file --> ${file_new_stat}"
-        echo "${now} : new file --> ${file_old_stat}"
+        echo "${now} : old file --> ${file_old_stat}"
         file_old_stat=${file_new_stat}
         curl -XPOST http://127.0.0.1:9090/-/reload
      fi
