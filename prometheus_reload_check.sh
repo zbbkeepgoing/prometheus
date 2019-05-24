@@ -12,7 +12,7 @@ while [[ true ]]; do
         echo "${now} : new file --> ${file_new_stat}"
         echo "${now} : old file --> ${file_old_stat}"
         file_old_stat=${file_new_stat}
-        curl -XPOST http://127.0.0.1:9090/-/reload
+        wget --post-data="" http://127.0.0.1:9090/-/reload
      fi
   else
     echo "${now} : file no exit "
