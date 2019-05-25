@@ -1,8 +1,6 @@
 FROM centos
 LABEL maintainer="The Special Config Prometheus Authors <634326860@qq.com>"
 
-ARG ARCH="amd64"
-ARG OS="linux"
 COPY prometheus                             /bin/prometheus
 COPY promtool                               /bin/promtool
 COPY documentation/examples/prometheus.yml  /etc/prometheus/prometheus.yml
