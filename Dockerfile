@@ -1,4 +1,4 @@
-FROM quay.io/prometheus/busybox-linux-amd64:latest
+FROM centos
 LABEL maintainer="The Special Config Prometheus Authors <634326860@qq.com>"
 
 ARG ARCH="amd64"
